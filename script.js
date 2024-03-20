@@ -32,7 +32,8 @@ search.addEventListener('click', () => {
 
         if (cityHide.textContent == city) {
             return;
-        } else {
+        } 
+        else {
             cityHide.textContent = city;
 
             container.style.height = '640px';
@@ -121,7 +122,7 @@ search.addEventListener('click', () => {
                     cloneInfoWeatherFirst.remove();
                     cloneInfoHumidityFirst.remove();
                     cloneInfoWindFirst.remove();
-                }, 2200);
+                }, 0);
             }
 
         }
