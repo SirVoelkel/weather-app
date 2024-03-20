@@ -1,4 +1,4 @@
-/* default settings */
+/************ ANCHOR default settings ************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 :root{
@@ -11,8 +11,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-/************ beginning ************/
 
 body{
     display: flex;
@@ -40,6 +38,9 @@ body{
     transition: height .6s ease;
 }
 
+
+
+/************ ANCHOR search-box ************/
 .search-box{
     position: relative;
     width: 100%;
@@ -88,6 +89,16 @@ body{
     cursor: pointer;
 }
 
+
+
+/************ ANCHOR city-hide ************/
+.city-hide{
+    display: none;
+}
+
+
+
+/************ ANCHOR weather-box ************/
 .weather-box{
     text-align: center;
     margin: 40px 0;
@@ -117,6 +128,7 @@ body{
     transition: transform 1s ease;
     transition-delay: .6s;
 
+    /* ?????????? */
     width: 100%;
 }
 
@@ -155,6 +167,9 @@ body{
     text-transform: capitalize;
 }
 
+
+
+/************ ANCHOR weather-details ************/
 .weather-details{
     position: absolute;
     bottom: 40px;
@@ -172,6 +187,16 @@ body{
     transform: translateY(-100%);
 }
 
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
 .weather-details.active .humidity,
 .weather-details.active .wind{
     transform: translateY(0%);
@@ -183,16 +208,6 @@ body{
 .weather-details .wind .info-wind{
     transform: translateY(-100%);
     overflow: hidden;
-}
-
-.weather-details .humidity{
-    padding-left: 20px;
-    justify-content: flex-start;
-}
-
-.weather-details .wind{
-    padding-left: 20px;
-    justify-content: flex-end;
 }
 
 .weather-details i{
@@ -211,6 +226,9 @@ body{
     font-weight: 500;
 }
 
+
+
+/************ ANCHOR not-found ************/
 .not-found{
     position: absolute;
     top: 0;
@@ -231,8 +249,9 @@ body{
     margin-top: 12px;
 }
 
-.city-hide{
-    display: none;
+/************ANCHOR el Clone ************/
+#clone-info-weather{
+    width: 100%;
 }
 
 #clone-info-weather,
@@ -240,13 +259,12 @@ body{
 #clone-info-wind{
     position: absolute;
     transform: translateY(-100%);
-    background: darkgreen;
 }
 
 #clone-info-weather .weather{
     transform: translateY(120%);
     transition: transform 1s ease, opacity 0s;
-    transition-delay: 0s, 2s;
+    transition-delay: 0s, ;
 }
 
 .weather-box:not(.active) #clone-info-weather .weather{
@@ -256,9 +274,6 @@ body{
 
 .active-clone#clone-info-weather .weather{
     transform: translateY(-0%);
-
-    position: relative;
-    width: 100%;
 }
 
 #clone-info-humidity span,
@@ -271,6 +286,9 @@ body{
 .active-clone#clone-info-wind span{
     transform: translateY(0%);
 }
+
+
+
 
 
 
